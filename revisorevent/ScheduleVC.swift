@@ -8,24 +8,27 @@
 
 import UIKit
 
-class ScheduleVC: UITableViewController {
+class ScheduleVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     var eventTimes = [EventTime]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.dataSource = self
+        tableView.delegate = self
+        
         (UIApplication.shared.delegate as! AppDelegate).setupTabBar()
                 
         tableView.register(UINib(nibName: "ScheduleCell", bundle: nil), forCellReuseIdentifier: "ScheduleCell")
         tableView.estimatedRowHeight = 120
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        eventTimes.append(EventTime(time: "08:00", events: [Event(id: 1, title: "Morgenmad", startTime: "08:00", endTime: "08:30"), Event(id: 2, title: "Brunch", startTime: "08:00", endTime: "09:00")]))
-        eventTimes.append(EventTime(time: "08:30", events: [Event(id: 3,title: "Intro", startTime: "08:30", endTime: "09:30")]))
-        eventTimes.append(EventTime(time: "09:30", events: [Event(id: 4, title: "Regnskab", startTime: "09:30", endTime: "10:30")]))
-        eventTimes.append(EventTime(time: "10:45", events: [Event(id: 5, title: "Svendel", startTime: "10:45", endTime: "12:00")]))
-        eventTimes.append(EventTime(time: "12:00", events: [Event(id: 6, title: "Farvel", startTime: "12:00", endTime: "12:15")]))
+        eventTimes.append(EventTime(time: "09:30", events: [Event(id: 1, title: "Registrering og morgenmad", startTime: "09:30", endTime: "10:00")]))
+        eventTimes.append(EventTime(time: "10:00", events: [Event(id: 2,title: "Velkomst", startTime: "10:00", endTime: "10:15", description: "Urs fra Penneo byder velkommen til dette års event")]))
+        eventTimes.append(EventTime(time: "10:15", events: [Event(id: 3, title: "Keynote", startTime: "10:15", endTime: "11:00")]))
         
         eventTimes = Array(eventTimes).sorted(by: { $0.time < $1.time })
     }
@@ -34,15 +37,15 @@ class ScheduleVC: UITableViewController {
         tableView.reloadData()
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return eventTimes.count
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return eventTimes[section].events.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let eventTime = eventTimes[indexPath.section]
         let event = eventTime.events[indexPath.row]
         
@@ -51,7 +54,7 @@ class ScheduleVC: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return eventTimes[section].time
     }
 }

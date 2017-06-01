@@ -98,7 +98,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             "schedule": (tabBar.items?[0])!,
             "schedule1": (tabBar.items?[1])!,
             "schedule2": (tabBar.items?[2])!,
-            "schedule3": (tabBar.items?[3])!
+            "star": (tabBar.items?[3])!
         ]
         
         let font = UIFont(name: "Verdana", size: 12)!

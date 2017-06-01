@@ -21,7 +21,7 @@
                         <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="mX7-H3-wMd" kind="relationship" relationship="rootViewController" id="JYb-Jp-89x"/>
+                        <segue destination="htC-Tv-lqA" kind="relationship" relationship="rootViewController" id="OYS-9A-n4N"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EIR-iP-C0m" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -29,32 +29,59 @@
             <point key="canvasLocation" x="-815" y="759"/>
         </scene>
         <!--ScheduleVC-->
-        <scene sceneID="1fb-G6-BQE">
+        <scene sceneID="Udx-0s-evr">
             <objects>
-                <tableViewController id="mX7-H3-wMd" customClass="ScheduleVC" customModule="revisorevent" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="61" sectionHeaderHeight="28" sectionFooterHeight="28" id="TU0-jx-Gu9">
+                <viewController id="htC-Tv-lqA" customClass="ScheduleVC" customModule="revisorevent" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vqg-yG-dr7"/>
+                        <viewControllerLayoutGuide type="bottom" id="Etb-fk-W6g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wLS-hu-FAC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vu6-Nz-y4h">
+                                <rect key="frame" x="87.5" y="72" width="200" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="zxA-0h-YRT"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Dag 1"/>
+                                    <segment title="Dag 2"/>
+                                </segments>
+                                <color key="tintColor" red="0.078431372549019607" green="0.21176470588235294" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zVt-Pe-u8v">
+                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vu6-Nz-y4h" firstAttribute="centerX" secondItem="wLS-hu-FAC" secondAttribute="centerX" id="5RH-EC-r98"/>
+                            <constraint firstItem="Etb-fk-W6g" firstAttribute="top" secondItem="zVt-Pe-u8v" secondAttribute="bottom" id="Hzr-Nu-p1F"/>
+                            <constraint firstAttribute="trailing" secondItem="zVt-Pe-u8v" secondAttribute="trailing" id="KAL-CE-5tE"/>
+                            <constraint firstItem="zVt-Pe-u8v" firstAttribute="top" secondItem="vu6-Nz-y4h" secondAttribute="bottom" constant="8" id="cXX-Tw-NKM"/>
+                            <constraint firstItem="zVt-Pe-u8v" firstAttribute="leading" secondItem="wLS-hu-FAC" secondAttribute="leading" id="ksq-lc-Jl4"/>
+                            <constraint firstItem="vu6-Nz-y4h" firstAttribute="top" secondItem="Vqg-yG-dr7" secondAttribute="bottom" constant="8" id="vaL-KG-plP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="niF-td-Bws">
                         <connections>
-                            <outlet property="dataSource" destination="mX7-H3-wMd" id="OWc-1f-p9h"/>
-                            <outlet property="delegate" destination="mX7-H3-wMd" id="PaS-zS-oAr"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="eza-94-yYq">
-                        <connections>
-                            <outlet property="titleView" destination="IFi-e0-0xO" id="Alw-y0-pyc"/>
+                            <outlet property="titleView" destination="IFi-e0-0xO" id="qSz-ed-ohr"/>
                         </connections>
                     </navigationItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0FK-s0-eAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    <connections>
+                        <outlet property="tableView" destination="zVt-Pe-u8v" id="I0d-EM-caE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZdZ-CR-Woe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" id="IFi-e0-0xO" userLabel="brand">
                     <rect key="frame" x="0.0" y="0.0" width="165" height="36"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </objects>
-            <point key="canvasLocation" x="80.799999999999997" y="757.87106446776613"/>
+            <point key="canvasLocation" x="109.59999999999999" y="758.77061469265368"/>
         </scene>
     </scenes>
     <resources>

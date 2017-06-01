@@ -16,6 +16,7 @@ class Event {
     private var _title: String!
     private var _startTime: String!
     private var _endTime: String!
+    private var _description: String!
     
     var id: Int {
         return _id
@@ -33,6 +34,13 @@ class Event {
         return _endTime
     }
     
+    var description: String {
+        if _description == nil {
+            _description = ""
+        }
+        return _description
+    }
+    
     init(id: Int, title: String, startTime: String, endTime: String) {
         _id = id
         _title = title
@@ -40,11 +48,20 @@ class Event {
         _endTime = endTime
     }
     
+    init(id: Int, title: String, startTime: String, endTime: String, description: String) {
+        _id = id
+        _title = title
+        _startTime = startTime
+        _endTime = endTime
+        _description = description
+    }
+    
     init(favEvent: FavEvent) {
         _id = Int(favEvent.id)
         _title = favEvent.title
         _startTime = favEvent.startTime
         _endTime = favEvent.endTime
+        _description = favEvent.eventDescription
     }
     
     func toggleFav() {
@@ -75,6 +92,7 @@ class Event {
         favEvent.title = _title
         favEvent.startTime = _startTime
         favEvent.endTime = _endTime
+        favEvent.eventDescription = _description
     }
     
 }

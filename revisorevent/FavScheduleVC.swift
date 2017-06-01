@@ -9,9 +9,18 @@
 import UIKit
 import CoreData
 
-class FavScheduleVC: UITableViewController, FavBtnPressedProtocol {
+class FavScheduleVC: UIViewController, UITableViewDelegate, UITableViewDataSource, FavBtnPressedProtocol {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     var eventTimes = [EventTime]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -23,15 +32,15 @@ class FavScheduleVC: UITableViewController, FavBtnPressedProtocol {
         loadFromCore()
     }
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return eventTimes.count
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return eventTimes[section].events.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let eventTime = eventTimes[indexPath.section]
         let event = eventTime.events[indexPath.row]
         
@@ -41,7 +50,7 @@ class FavScheduleVC: UITableViewController, FavBtnPressedProtocol {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return eventTimes[section].time
     }
     

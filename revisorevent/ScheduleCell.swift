@@ -12,17 +12,30 @@ import CoreData
 class ScheduleCell: UITableViewCell {
 
     @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var descriptionLbl: UILabel!
     @IBOutlet weak var startEnd: UILabel!
     @IBOutlet weak var favBtn: UIButton!
+    @IBOutlet weak var speakerImg: UIImageView!
     
     var delegate: FavBtnPressedProtocol?
     
     private var _event: Event!
     
     func configureCell(event: Event) {
+        speakerImg.layer.masksToBounds = false
+        speakerImg.clipsToBounds = true
+        speakerImg.layer.cornerRadius = speakerImg.frame.width / 2
+        
         _event = event
         title.text = event.title
         startEnd.text = "\(event.startTime) - \(event.endTime)"
+        if event.description == "" {
+            descriptionLbl.isHidden = true
+        } else {
+            descriptionLbl.isHidden = false
+            descriptionLbl.text = event.description
+        }
+
         updateFavBtnState()
     }
     
@@ -34,9 +47,9 @@ class ScheduleCell: UITableViewCell {
     
     func updateFavBtnState() {
         if checkIfFav() {
-            favBtn.setTitle("Is Fav", for: .normal)
+            favBtn.setImage(UIImage(named: "star-filled_TableView"))
         } else {
-            favBtn.setTitle("Not Fav", for: .normal)
+            favBtn.setImage(UIImage(named: "star-unfilled_TableView"))
         }
     }
     

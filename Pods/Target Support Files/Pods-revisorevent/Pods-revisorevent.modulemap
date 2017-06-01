@@ -1,0 +1,6 @@
+framework module Pods_revisorevent {
+  umbrella header "Pods-revisorevent-umbrella.h"
+
+  export *
+  module * { export * }
+}

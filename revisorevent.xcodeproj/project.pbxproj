@@ -16,8 +16,12 @@
 		112123061EE00E8500D010CC /* Schedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 112123051EE00E8500D010CC /* Schedule.storyboard */; };
 		112123091EE010B300D010CC /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112123081EE010B300D010CC /* ScheduleVC.swift */; };
 		1121230C1EE010DD00D010CC /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1121230B1EE010DD00D010CC /* Event.swift */; };
-		1121230E1EE0111400D010CC /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1121230D1EE0111400D010CC /* ScheduleCell.swift */; };
 		112123101EE0150E00D010CC /* EventTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1121230F1EE0150E00D010CC /* EventTime.swift */; };
+		118D8D241EE02931007D4E69 /* FavSchedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118D8D231EE02931007D4E69 /* FavSchedule.storyboard */; };
+		118D8D261EE02A0D007D4E69 /* FavScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D8D251EE02A0D007D4E69 /* FavScheduleVC.swift */; };
+		118D8D291EE02AB5007D4E69 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D8D271EE02AB5007D4E69 /* ScheduleCell.swift */; };
+		118D8D2A1EE02AB5007D4E69 /* ScheduleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 118D8D281EE02AB5007D4E69 /* ScheduleCell.xib */; };
+		118D8D2C1EE0325C007D4E69 /* FavBtnPressedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D8D2B1EE0325C007D4E69 /* FavBtnPressedProtocol.swift */; };
 		C5E15FE4D4AE26EFF083AE2B /* Pods_revisorevent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04D8D5124E60493FF84644D /* Pods_revisorevent.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,8 +37,12 @@
 		112123051EE00E8500D010CC /* Schedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Schedule.storyboard; sourceTree = "<group>"; };
 		112123081EE010B300D010CC /* ScheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		1121230B1EE010DD00D010CC /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		1121230D1EE0111400D010CC /* ScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
 		1121230F1EE0150E00D010CC /* EventTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTime.swift; sourceTree = "<group>"; };
+		118D8D231EE02931007D4E69 /* FavSchedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FavSchedule.storyboard; sourceTree = "<group>"; };
+		118D8D251EE02A0D007D4E69 /* FavScheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavScheduleVC.swift; sourceTree = "<group>"; };
+		118D8D271EE02AB5007D4E69 /* ScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
+		118D8D281EE02AB5007D4E69 /* ScheduleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleCell.xib; sourceTree = "<group>"; };
+		118D8D2B1EE0325C007D4E69 /* FavBtnPressedProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavBtnPressedProtocol.swift; sourceTree = "<group>"; };
 		BF013E7FCBE54A318F8E75C9 /* Pods-revisorevent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-revisorevent.release.xcconfig"; path = "Pods/Target Support Files/Pods-revisorevent/Pods-revisorevent.release.xcconfig"; sourceTree = "<group>"; };
 		C1926E408C234BF713EACD73 /* Pods-revisorevent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-revisorevent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-revisorevent/Pods-revisorevent.debug.xcconfig"; sourceTree = "<group>"; };
 		D04D8D5124E60493FF84644D /* Pods_revisorevent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_revisorevent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +81,7 @@
 		112122EC1EE00D8800D010CC /* revisorevent */ = {
 			isa = PBXGroup;
 			children = (
+				112123111EE022F000D010CC /* Protocols */,
 				1121230A1EE010D100D010CC /* Models */,
 				112123041EE00E0600D010CC /* Storyboards */,
 				112123031EE00DFD00D010CC /* Views */,
@@ -98,7 +107,8 @@
 		112123031EE00DFD00D010CC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1121230D1EE0111400D010CC /* ScheduleCell.swift */,
+				118D8D271EE02AB5007D4E69 /* ScheduleCell.swift */,
+				118D8D281EE02AB5007D4E69 /* ScheduleCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -108,6 +118,7 @@
 			children = (
 				112122F11EE00D8800D010CC /* Main.storyboard */,
 				112123051EE00E8500D010CC /* Schedule.storyboard */,
+				118D8D231EE02931007D4E69 /* FavSchedule.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -116,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				112123081EE010B300D010CC /* ScheduleVC.swift */,
+				118D8D251EE02A0D007D4E69 /* FavScheduleVC.swift */,
 			);
 			name = Schedule;
 			sourceTree = "<group>";
@@ -127,6 +139,14 @@
 				1121230F1EE0150E00D010CC /* EventTime.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		112123111EE022F000D010CC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				118D8D2B1EE0325C007D4E69 /* FavBtnPressedProtocol.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		38D1467CA64B6B71AD5A5EB0 /* Pods */ = {
@@ -210,6 +230,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				112122FB1EE00D8800D010CC /* LaunchScreen.storyboard in Resources */,
+				118D8D241EE02931007D4E69 /* FavSchedule.storyboard in Resources */,
+				118D8D2A1EE02AB5007D4E69 /* ScheduleCell.xib in Resources */,
 				112122F81EE00D8800D010CC /* Assets.xcassets in Resources */,
 				112122F31EE00D8800D010CC /* Main.storyboard in Resources */,
 				112123061EE00E8500D010CC /* Schedule.storyboard in Resources */,
@@ -272,10 +294,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				112122F01EE00D8800D010CC /* ViewController.swift in Sources */,
+				118D8D2C1EE0325C007D4E69 /* FavBtnPressedProtocol.swift in Sources */,
+				118D8D261EE02A0D007D4E69 /* FavScheduleVC.swift in Sources */,
 				112123091EE010B300D010CC /* ScheduleVC.swift in Sources */,
 				112122EE1EE00D8800D010CC /* AppDelegate.swift in Sources */,
+				118D8D291EE02AB5007D4E69 /* ScheduleCell.swift in Sources */,
 				112122F61EE00D8800D010CC /* revisorevent.xcdatamodeld in Sources */,
-				1121230E1EE0111400D010CC /* ScheduleCell.swift in Sources */,
 				112123101EE0150E00D010CC /* EventTime.swift in Sources */,
 				1121230C1EE010DD00D010CC /* Event.swift in Sources */,
 			);

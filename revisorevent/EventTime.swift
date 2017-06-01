@@ -16,8 +16,15 @@ class EventTime {
         return _time
     }
     
+    
+    
     var events: [Event] {
-        return _events
+        get { 
+            return _events
+        }
+        set(value) {
+            _events = value
+        }
     }
     
     init(time: String, events: [Event]) {

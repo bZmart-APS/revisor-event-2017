@@ -20,11 +20,22 @@
                     </tabBar>
                     <connections>
                         <segue destination="8ec-Xk-OKA" kind="relationship" relationship="viewControllers" id="1kf-kA-9Wg"/>
+                        <segue destination="Nrr-yA-y1Z" kind="relationship" relationship="viewControllers" id="htM-dV-Oh1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bn3-3X-RjV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-359" y="-528"/>
+        </scene>
+        <!--FavSchedule-->
+        <scene sceneID="r9b-EY-Hzk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FavSchedule" id="Nrr-yA-y1Z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="lRQ-AJ-u4W"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OhZ-ve-gY9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="462" y="-272"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="QJg-jW-k1m">

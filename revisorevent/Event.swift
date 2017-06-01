@@ -6,13 +6,20 @@
 //  Copyright © 2017 bZmart. All rights reserved.
 //
 
+import UIKit
 import Foundation
+import CoreData
 
 class Event {
     
+    private var _id: Int!
     private var _title: String!
     private var _startTime: String!
     private var _endTime: String!
+    
+    var id: Int {
+        return _id
+    }
     
     var title: String {
         return _title
@@ -26,10 +33,48 @@ class Event {
         return _endTime
     }
     
-    init(title: String, startTime: String, endTime: String) {
+    init(id: Int, title: String, startTime: String, endTime: String) {
+        _id = id
         _title = title
         _startTime = startTime
         _endTime = endTime
+    }
+    
+    init(favEvent: FavEvent) {
+        _id = Int(favEvent.id)
+        _title = favEvent.title
+        _startTime = favEvent.startTime
+        _endTime = favEvent.endTime
+    }
+    
+    func toggleFav() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let request: NSFetchRequest<NSFetchRequestResult> = FavEvent.fetchRequest()
+        do {
+            if let res = try context.fetch(request) as? [FavEvent] {
+                for event in res {
+                    if Int(event.id) == _id {
+                        context.delete(event)
+                        try context.save()
+                        return
+                    }
+                }
+            }
+            addFavEventToContext(context)
+            try context.save()
+        }catch{
+            fatalError("Could not load FavEvents from core data")
+        }
+
+    }
+    
+    private func addFavEventToContext(_ context: NSManagedObjectContext) {
+        let favEvent = FavEvent(context: context)
+        
+        favEvent.id = Int32(_id)
+        favEvent.title = _title
+        favEvent.startTime = _startTime
+        favEvent.endTime = _endTime
     }
     
 }

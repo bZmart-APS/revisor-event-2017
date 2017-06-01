@@ -15,6 +15,8 @@ class ScheduleVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        (UIApplication.shared.delegate as! AppDelegate).setupTabBar()
+                
         tableView.register(UINib(nibName: "ScheduleCell", bundle: nil), forCellReuseIdentifier: "ScheduleCell")
         tableView.estimatedRowHeight = 120
         tableView.rowHeight = UITableViewAutomaticDimension

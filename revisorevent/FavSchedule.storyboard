@@ -37,11 +37,11 @@
             </objects>
             <point key="canvasLocation" x="780" y="121"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Mit Program-->
         <scene sceneID="3l4-N2-BTJ">
             <objects>
                 <navigationController id="VkS-Gd-a93" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="SsM-gF-1a1"/>
+                    <tabBarItem key="tabBarItem" title="Mit Program" id="SsM-gF-1a1"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gFK-SS-HcI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

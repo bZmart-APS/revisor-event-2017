@@ -22,6 +22,10 @@
 		118D8D291EE02AB5007D4E69 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D8D271EE02AB5007D4E69 /* ScheduleCell.swift */; };
 		118D8D2A1EE02AB5007D4E69 /* ScheduleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 118D8D281EE02AB5007D4E69 /* ScheduleCell.xib */; };
 		118D8D2C1EE0325C007D4E69 /* FavBtnPressedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D8D2B1EE0325C007D4E69 /* FavBtnPressedProtocol.swift */; };
+		118D8D2F1EE03C5F007D4E69 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D8D2E1EE03C5F007D4E69 /* UIButton.swift */; };
+		118D8D311EE03F6B007D4E69 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118D8D301EE03F6B007D4E69 /* MapKit.framework */; };
+		118D8D331EE040A1007D4E69 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D8D321EE040A1007D4E69 /* UIColor.swift */; };
+		118D8D361EE040D8007D4E69 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D8D351EE040D8007D4E69 /* Constants.swift */; };
 		C5E15FE4D4AE26EFF083AE2B /* Pods_revisorevent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04D8D5124E60493FF84644D /* Pods_revisorevent.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +47,10 @@
 		118D8D271EE02AB5007D4E69 /* ScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
 		118D8D281EE02AB5007D4E69 /* ScheduleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleCell.xib; sourceTree = "<group>"; };
 		118D8D2B1EE0325C007D4E69 /* FavBtnPressedProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavBtnPressedProtocol.swift; sourceTree = "<group>"; };
+		118D8D2E1EE03C5F007D4E69 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		118D8D301EE03F6B007D4E69 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		118D8D321EE040A1007D4E69 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		118D8D351EE040D8007D4E69 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BF013E7FCBE54A318F8E75C9 /* Pods-revisorevent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-revisorevent.release.xcconfig"; path = "Pods/Target Support Files/Pods-revisorevent/Pods-revisorevent.release.xcconfig"; sourceTree = "<group>"; };
 		C1926E408C234BF713EACD73 /* Pods-revisorevent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-revisorevent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-revisorevent/Pods-revisorevent.debug.xcconfig"; sourceTree = "<group>"; };
 		D04D8D5124E60493FF84644D /* Pods_revisorevent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_revisorevent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				118D8D311EE03F6B007D4E69 /* MapKit.framework in Frameworks */,
 				C5E15FE4D4AE26EFF083AE2B /* Pods_revisorevent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +90,8 @@
 		112122EC1EE00D8800D010CC /* revisorevent */ = {
 			isa = PBXGroup;
 			children = (
+				118D8D341EE040CD007D4E69 /* Utils */,
+				118D8D2D1EE03C45007D4E69 /* Extensions */,
 				112123111EE022F000D010CC /* Protocols */,
 				1121230A1EE010D100D010CC /* Models */,
 				112123041EE00E0600D010CC /* Storyboards */,
@@ -149,6 +160,23 @@
 			name = Protocols;
 			sourceTree = "<group>";
 		};
+		118D8D2D1EE03C45007D4E69 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				118D8D2E1EE03C5F007D4E69 /* UIButton.swift */,
+				118D8D321EE040A1007D4E69 /* UIColor.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		118D8D341EE040CD007D4E69 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				118D8D351EE040D8007D4E69 /* Constants.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		38D1467CA64B6B71AD5A5EB0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +189,7 @@
 		6907A82F426AD8212D944076 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				118D8D301EE03F6B007D4E69 /* MapKit.framework */,
 				D04D8D5124E60493FF84644D /* Pods_revisorevent.framework */,
 			);
 			name = Frameworks;
@@ -203,6 +232,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = M84BWU23W8;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -298,10 +332,13 @@
 				118D8D261EE02A0D007D4E69 /* FavScheduleVC.swift in Sources */,
 				112123091EE010B300D010CC /* ScheduleVC.swift in Sources */,
 				112122EE1EE00D8800D010CC /* AppDelegate.swift in Sources */,
+				118D8D2F1EE03C5F007D4E69 /* UIButton.swift in Sources */,
 				118D8D291EE02AB5007D4E69 /* ScheduleCell.swift in Sources */,
+				118D8D331EE040A1007D4E69 /* UIColor.swift in Sources */,
 				112122F61EE00D8800D010CC /* revisorevent.xcdatamodeld in Sources */,
 				112123101EE0150E00D010CC /* EventTime.swift in Sources */,
 				1121230C1EE010DD00D010CC /* Event.swift in Sources */,
+				118D8D361EE040D8007D4E69 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

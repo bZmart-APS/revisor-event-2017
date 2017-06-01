@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+               
         return true
     }
 
@@ -89,5 +90,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    // MARK: - Setup tab bar item 
+    
+    func setupTabBar() {
+        let tabBar = (self.window?.rootViewController as! UITabBarController).tabBar
+        let tabBarItems: Dictionary<String, UITabBarItem> = [
+            "schedule": (tabBar.items?[0])!,
+            "schedule1": (tabBar.items?[1])!,
+            "schedule2": (tabBar.items?[2])!,
+            "schedule3": (tabBar.items?[3])!
+        ]
+        
+        let font = UIFont(name: "Verdana", size: 12)!
+        
+        for (tabName, tabBar) in tabBarItems {
+            tabBar.selectedImage = UIImage(named: "\(tabName)-selected")?.withRenderingMode(.alwaysOriginal)
+            tabBar.image = UIImage(named: "\(tabName)-unselected")?.withRenderingMode(.alwaysOriginal)
+            tabBar.setTitleTextAttributes([NSForegroundColorAttributeName: DefaultBlueColor, NSFontAttributeName: font], for: .selected)
+            
+            
+            tabBar.setTitleTextAttributes([NSForegroundColorAttributeName: DefaultWhiteColor, NSFontAttributeName: font], for: .normal)
+        }
+    }
 }
 

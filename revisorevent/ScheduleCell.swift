@@ -33,7 +33,7 @@ class ScheduleCell: UITableViewCell {
         
         _event = event
         title.text = event.title
-        //startEnd.text = "\(event.startTime) - \(event.endTime)"
+        self.backgroundColor = _event.color
         
         descriptionLbl.numberOfLines = 2
         

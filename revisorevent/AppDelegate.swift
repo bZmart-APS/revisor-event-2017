@@ -96,8 +96,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabBar = (self.window?.rootViewController as! UITabBarController).tabBar
         let tabBarItems: Dictionary<String, UITabBarItem> = [
             "schedule": (tabBar.items?[0])!,
-            "schedule1": (tabBar.items?[1])!,
-            "schedule2": (tabBar.items?[2])!,
+            "about": (tabBar.items?[1])!,
+            "maps": (tabBar.items?[2])!,
             "star": (tabBar.items?[3])!
         ]
         

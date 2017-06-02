@@ -56,6 +56,20 @@ class ScheduleVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return eventTimes[section].time
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let event = eventTimes[indexPath.section].events[indexPath.row]
+        
+        performSegue(withIdentifier: "EventDetails", sender: event)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dist = segue.destination as? EventDetailsVC {
+            if let event = sender as? Event {
+                dist.event = event
+            }
+        }
+    }
+    
     func createDummyData() {
         eventTimes.append(EventTime(time: "09:30", events: [Event(ownDict: Dictionary<String, Any>(dictionaryLiteral: ("Id", 1), ("Title", "Registrering og morgenmad"), ("StartTime", "09:30"), ("EndTime", "10:00")))]))
         
@@ -63,7 +77,7 @@ class ScheduleVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         eventTimes.append(EventTime(time: "10:15", events: [Event(ownDict: Dictionary<String, Any>(dictionaryLiteral: ("Id", 3), ("Title", "Keynote"), ("StartTime", "10:15"), ("EndTime", "11:00"), ("Description", "Jacob Wandt, CEO i Zenegy, medstifter af e-conomic og revisor af baggrund, fortæller om sine erfaringer både som del af og leverandør til revisorbranchen."), ("SpeakerName", "Jacob Wandt"), ("SpeakerImg", UIImage(named: "jacob_wandt")!), ("CompanyImg", UIImage(named: "zenegy")!)))]))
         
-        eventTimes.append(EventTime(time: "11:00", events: [Event(ownDict: Dictionary<String, Any>(dictionaryLiteral: ("Id", 4), ("Title", "Pause"), ("StartTime", "11:00"), ("EndTime", "11:15"), ("SpeakerImg", UIImage(named: "coffee")!)))]))
+        eventTimes.append(EventTime(time: "11:00", events: [Event(ownDict: Dictionary<String, Any>(dictionaryLiteral: ("Id", 4), ("Title", "Pause"), ("StartTime", "11:00"), ("EndTime", "11:15"), ("SpeakerImg", UIImage(named: "coffee")!), ("Color", 0x88E498)))]))
         
         eventTimes.append(EventTime(time: "11:15", events: [Event(ownDict: Dictionary<String, Any>(dictionaryLiteral: ("Id", 5), ("Title", "Workshop"), ("StartTime", "11:15"), ("EndTime", "13:00"), ("Description", "Få opdateret din faglige viden. Ole Aagesen fra Revitax fortæller mere om ...."), ("CompanyImg", UIImage(named: "workshop")!)))]))
         

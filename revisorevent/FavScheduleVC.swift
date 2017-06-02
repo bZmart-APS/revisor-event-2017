@@ -54,6 +54,21 @@ class FavScheduleVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         return eventTimes[section].time
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let event = eventTimes[indexPath.section].events[indexPath.row]
+        
+        performSegue(withIdentifier: "EventDetails", sender: event)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dist = segue.destination as? EventDetailsVC {
+            if let event = sender as? Event {
+                dist.delegate = self
+                dist.event = event
+            }
+        }
+    }
+    
     func pressedFavButton() {
         loadFromCore()
     }

@@ -20,6 +20,7 @@ class Event {
     private var _speakerName: String?
     private var _speakerImg: UIImage?
     private var _companyImg: UIImage?
+    private var _color: UIColor!
     
     var id: Int {
         return _id
@@ -53,6 +54,13 @@ class Event {
         return _companyImg
     }
     
+    var color: UIColor {
+        if _color == nil {
+            _color = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0)
+        }
+        return _color
+    }
+    
     init(ownDict: Dictionary<String, Any>) {
         if let id = ownDict["Id"] as? Int { _id = id }
         if let title = ownDict["Title"] as? String { _title = title }
@@ -62,6 +70,7 @@ class Event {
         if let speakerName = ownDict["SpeakerName"] as? String { _speakerName = speakerName }
         if let speakerImg = ownDict["SpeakerImg"] as? UIImage { _speakerImg = speakerImg }
         if let companyImg = ownDict["CompanyImg"] as? UIImage { _companyImg = companyImg }
+        if let color = ownDict["Color"] as? Int { _color = UIColor(hex: color) }
     }
     
     init(favEvent: FavEvent) {

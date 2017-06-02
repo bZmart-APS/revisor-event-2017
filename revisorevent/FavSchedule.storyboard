@@ -49,14 +49,14 @@
                                     <segment title="Dag 1"/>
                                     <segment title="Dag 2"/>
                                 </segments>
-                                <color key="tintColor" red="0.078431372550000003" green="0.21176470589999999" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AmJ-B5-w33">
                                 <rect key="frame" x="0.0" y="108" width="375" height="510"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.21568627450980393" green="0.38823529411764707" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="AmJ-B5-w33" firstAttribute="leading" secondItem="c7E-Te-28i" secondAttribute="leading" id="00K-mj-jyN"/>
                             <constraint firstItem="3IS-dE-QG9" firstAttribute="top" secondItem="wzG-6w-LEf" secondAttribute="bottom" constant="8" id="3cz-P5-bx1"/>
@@ -73,6 +73,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="AmJ-B5-w33" id="aOU-G1-xPY"/>
+                        <segue destination="Tqr-Rw-2bG" kind="show" identifier="EventDetails" id="yDV-rO-7GM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uMe-SL-bad" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -82,6 +83,48 @@
                 </imageView>
             </objects>
             <point key="canvasLocation" x="790" y="121"/>
+        </scene>
+        <!--Event DetailsVC-->
+        <scene sceneID="DGc-a1-RbW">
+            <objects>
+                <viewController id="Tqr-Rw-2bG" customClass="EventDetailsVC" customModule="revisorevent" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qJN-Te-ezS"/>
+                        <viewControllerLayoutGuide type="bottom" id="b8K-Tm-ZM0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qh5-4y-F2I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wpb-Yv-x3q">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wpb-Yv-x3q" firstAttribute="leading" secondItem="Qh5-4y-F2I" secondAttribute="leading" id="G2B-hC-U9U"/>
+                            <constraint firstItem="b8K-Tm-ZM0" firstAttribute="top" secondItem="wpb-Yv-x3q" secondAttribute="bottom" id="Vif-Dh-zcn"/>
+                            <constraint firstItem="wpb-Yv-x3q" firstAttribute="top" secondItem="qJN-Te-ezS" secondAttribute="bottom" id="d1s-KL-Hnq"/>
+                            <constraint firstAttribute="trailing" secondItem="wpb-Yv-x3q" secondAttribute="trailing" id="mcG-ND-P6W"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1jZ-hb-5xG">
+                        <connections>
+                            <outlet property="titleView" destination="b6N-6H-WTH" id="OQ4-x4-mrr"/>
+                        </connections>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="xibView" destination="wpb-Yv-x3q" id="hw9-3P-zRa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ti-gR-7Jc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" id="b6N-6H-WTH" userLabel="brand">
+                    <rect key="frame" x="0.0" y="0.0" width="165" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+            </objects>
+            <point key="canvasLocation" x="1647" y="121"/>
         </scene>
     </scenes>
     <resources>

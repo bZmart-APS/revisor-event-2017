@@ -17,6 +17,10 @@
 		112123091EE010B300D010CC /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112123081EE010B300D010CC /* ScheduleVC.swift */; };
 		1121230C1EE010DD00D010CC /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1121230B1EE010DD00D010CC /* Event.swift */; };
 		112123101EE0150E00D010CC /* EventTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1121230F1EE0150E00D010CC /* EventTime.swift */; };
+		118698031EE17E9800671A59 /* EventDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118698021EE17E9800671A59 /* EventDetailsVC.swift */; };
+		1186980B1EE183DA00671A59 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1186980A1EE183DA00671A59 /* UIView.swift */; };
+		1186980D1EE1846000671A59 /* EventDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1186980C1EE1846000671A59 /* EventDetail.swift */; };
+		1186980F1EE1849500671A59 /* EventDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1186980E1EE1849400671A59 /* EventDetail.xib */; };
 		118D8D241EE02931007D4E69 /* FavSchedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118D8D231EE02931007D4E69 /* FavSchedule.storyboard */; };
 		118D8D261EE02A0D007D4E69 /* FavScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D8D251EE02A0D007D4E69 /* FavScheduleVC.swift */; };
 		118D8D291EE02AB5007D4E69 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D8D271EE02AB5007D4E69 /* ScheduleCell.swift */; };
@@ -42,6 +46,10 @@
 		112123081EE010B300D010CC /* ScheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		1121230B1EE010DD00D010CC /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		1121230F1EE0150E00D010CC /* EventTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTime.swift; sourceTree = "<group>"; };
+		118698021EE17E9800671A59 /* EventDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsVC.swift; sourceTree = "<group>"; };
+		1186980A1EE183DA00671A59 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		1186980C1EE1846000671A59 /* EventDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetail.swift; sourceTree = "<group>"; };
+		1186980E1EE1849400671A59 /* EventDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetail.xib; sourceTree = "<group>"; };
 		118D8D231EE02931007D4E69 /* FavSchedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FavSchedule.storyboard; sourceTree = "<group>"; };
 		118D8D251EE02A0D007D4E69 /* FavScheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavScheduleVC.swift; sourceTree = "<group>"; };
 		118D8D271EE02AB5007D4E69 /* ScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
@@ -111,6 +119,7 @@
 			children = (
 				112123071EE0109200D010CC /* Schedule */,
 				112122EF1EE00D8800D010CC /* ViewController.swift */,
+				118698021EE17E9800671A59 /* EventDetailsVC.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -120,6 +129,8 @@
 			children = (
 				118D8D271EE02AB5007D4E69 /* ScheduleCell.swift */,
 				118D8D281EE02AB5007D4E69 /* ScheduleCell.xib */,
+				1186980C1EE1846000671A59 /* EventDetail.swift */,
+				1186980E1EE1849400671A59 /* EventDetail.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -165,6 +176,7 @@
 			children = (
 				118D8D2E1EE03C5F007D4E69 /* UIButton.swift */,
 				118D8D321EE040A1007D4E69 /* UIColor.swift */,
+				1186980A1EE183DA00671A59 /* UIView.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -266,6 +278,7 @@
 				112122FB1EE00D8800D010CC /* LaunchScreen.storyboard in Resources */,
 				118D8D241EE02931007D4E69 /* FavSchedule.storyboard in Resources */,
 				118D8D2A1EE02AB5007D4E69 /* ScheduleCell.xib in Resources */,
+				1186980F1EE1849500671A59 /* EventDetail.xib in Resources */,
 				112122F81EE00D8800D010CC /* Assets.xcassets in Resources */,
 				112122F31EE00D8800D010CC /* Main.storyboard in Resources */,
 				112123061EE00E8500D010CC /* Schedule.storyboard in Resources */,
@@ -330,12 +343,15 @@
 				112122F01EE00D8800D010CC /* ViewController.swift in Sources */,
 				118D8D2C1EE0325C007D4E69 /* FavBtnPressedProtocol.swift in Sources */,
 				118D8D261EE02A0D007D4E69 /* FavScheduleVC.swift in Sources */,
+				118698031EE17E9800671A59 /* EventDetailsVC.swift in Sources */,
 				112123091EE010B300D010CC /* ScheduleVC.swift in Sources */,
 				112122EE1EE00D8800D010CC /* AppDelegate.swift in Sources */,
 				118D8D2F1EE03C5F007D4E69 /* UIButton.swift in Sources */,
 				118D8D291EE02AB5007D4E69 /* ScheduleCell.swift in Sources */,
+				1186980D1EE1846000671A59 /* EventDetail.swift in Sources */,
 				118D8D331EE040A1007D4E69 /* UIColor.swift in Sources */,
 				112122F61EE00D8800D010CC /* revisorevent.xcdatamodeld in Sources */,
+				1186980B1EE183DA00671A59 /* UIView.swift in Sources */,
 				112123101EE0150E00D010CC /* EventTime.swift in Sources */,
 				1121230C1EE010DD00D010CC /* Event.swift in Sources */,
 				118D8D361EE040D8007D4E69 /* Constants.swift in Sources */,

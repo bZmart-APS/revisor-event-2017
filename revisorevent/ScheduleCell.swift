@@ -16,6 +16,8 @@ class ScheduleCell: UITableViewCell {
     @IBOutlet weak var startEnd: UILabel!
     @IBOutlet weak var favBtn: UIButton!
     @IBOutlet weak var speakerImg: UIImageView!
+    @IBOutlet weak var speakerNameLbl: UILabel!
+    @IBOutlet weak var companyImg: UIImageView!
     
     var delegate: FavBtnPressedProtocol?
     
@@ -29,12 +31,15 @@ class ScheduleCell: UITableViewCell {
         _event = event
         title.text = event.title
         startEnd.text = "\(event.startTime) - \(event.endTime)"
-        if event.description == "" {
+        if event.description == nil {
             descriptionLbl.isHidden = true
         } else {
             descriptionLbl.isHidden = false
             descriptionLbl.text = event.description
         }
+        speakerImg.image = event.speakerImg
+        companyImg.image = event.companyImg
+        speakerNameLbl.text = event.speakerName
 
         updateFavBtnState()
     }

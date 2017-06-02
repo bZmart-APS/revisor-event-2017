@@ -16,7 +16,10 @@ class Event {
     private var _title: String!
     private var _startTime: String!
     private var _endTime: String!
-    private var _description: String!
+    private var _description: String?
+    private var _speakerName: String?
+    private var _speakerImg: UIImage?
+    private var _companyImg: UIImage?
     
     var id: Int {
         return _id
@@ -34,26 +37,31 @@ class Event {
         return _endTime
     }
     
-    var description: String {
-        if _description == nil {
-            _description = ""
-        }
+    var speakerName: String? {
+        return _speakerName
+    }
+    
+    var description: String? {
         return _description
     }
     
-    init(id: Int, title: String, startTime: String, endTime: String) {
-        _id = id
-        _title = title
-        _startTime = startTime
-        _endTime = endTime
+    var speakerImg: UIImage? {
+        return _speakerImg
     }
     
-    init(id: Int, title: String, startTime: String, endTime: String, description: String) {
-        _id = id
-        _title = title
-        _startTime = startTime
-        _endTime = endTime
-        _description = description
+    var companyImg: UIImage? {
+        return _companyImg
+    }
+    
+    init(ownDict: Dictionary<String, Any>) {
+        if let id = ownDict["Id"] as? Int { _id = id }
+        if let title = ownDict["Title"] as? String { _title = title }
+        if let startTime = ownDict["StartTime"] as? String { _startTime = startTime }
+        if let endTime = ownDict["EndTime"] as? String { _endTime = endTime }
+        if let description = ownDict["Description"] as? String { _description = description }
+        if let speakerName = ownDict["SpeakerName"] as? String { _speakerName = speakerName }
+        if let speakerImg = ownDict["SpeakerImg"] as? UIImage { _speakerImg = speakerImg }
+        if let companyImg = ownDict["CompanyImg"] as? UIImage { _companyImg = companyImg }
     }
     
     init(favEvent: FavEvent) {
@@ -62,6 +70,12 @@ class Event {
         _startTime = favEvent.startTime
         _endTime = favEvent.endTime
         _description = favEvent.eventDescription
+        if let speakerImg = favEvent.speakerImg as? UIImage {
+            _speakerImg = speakerImg
+        }
+        if let companyImg = favEvent.companyImg as? UIImage {
+            _companyImg = companyImg
+        }
     }
     
     func toggleFav() {
@@ -93,6 +107,8 @@ class Event {
         favEvent.startTime = _startTime
         favEvent.endTime = _endTime
         favEvent.eventDescription = _description
+        favEvent.speakerImg = _speakerImg
+        favEvent.companyImg = _companyImg
     }
     
 }

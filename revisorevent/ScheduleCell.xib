@@ -36,7 +36,7 @@
                             </label>
                         </subviews>
                     </stackView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="urs" translatesAutoresizingMaskIntoConstraints="NO" id="ETt-GN-PMh">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="urs_kent" translatesAutoresizingMaskIntoConstraints="NO" id="ETt-GN-PMh">
                         <rect key="frame" x="272" y="8.5" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="CuV-ah-Bcu"/>
@@ -106,9 +106,11 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="companyImg" destination="xwy-lt-lqM" id="0PD-u9-uxy"/>
                 <outlet property="descriptionLbl" destination="Kt6-kX-SZf" id="bQI-ZV-SAr"/>
                 <outlet property="favBtn" destination="poE-AZ-4tC" id="ygR-Nh-OoV"/>
                 <outlet property="speakerImg" destination="ETt-GN-PMh" id="mAM-fL-fry"/>
+                <outlet property="speakerNameLbl" destination="1L0-h3-YVh" id="089-ys-0Tn"/>
                 <outlet property="startEnd" destination="jZ7-KG-k9O" id="FOa-yg-odU"/>
                 <outlet property="title" destination="jfF-dV-T2z" id="pop-FX-2gd"/>
             </connections>
@@ -117,6 +119,6 @@
     </objects>
     <resources>
         <image name="penneo" width="157" height="65"/>
-        <image name="urs" width="800" height="800"/>
+        <image name="urs_kent" width="800" height="800"/>
     </resources>
 </document>

@@ -26,9 +26,7 @@ class ScheduleVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.estimatedRowHeight = 120
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        eventTimes.append(EventTime(time: "09:30", events: [Event(id: 1, title: "Registrering og morgenmad", startTime: "09:30", endTime: "10:00")]))
-        eventTimes.append(EventTime(time: "10:00", events: [Event(id: 2,title: "Velkomst", startTime: "10:00", endTime: "10:15", description: "Urs fra Penneo byder velkommen til dette års event")]))
-        eventTimes.append(EventTime(time: "10:15", events: [Event(id: 3, title: "Keynote", startTime: "10:15", endTime: "11:00")]))
+        createDummyData()
         
         eventTimes = Array(eventTimes).sorted(by: { $0.time < $1.time })
     }
@@ -57,4 +55,32 @@ class ScheduleVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return eventTimes[section].time
     }
+    
+    func createDummyData() {
+        eventTimes.append(EventTime(time: "09:30", events: [Event(ownDict: Dictionary<String, Any>(dictionaryLiteral: ("Id", 1), ("Title", "Registrering og morgenmad"), ("StartTime", "09:30"), ("EndTime", "10:00")))]))
+        
+        eventTimes.append(EventTime(time: "10:00", events: [Event(ownDict: Dictionary<String, Any>(dictionaryLiteral: ("Id", 2), ("Title", "Velkomst"), ("StartTime", "10:00"), ("EndTime", "10:15"), ("Description", "Urs fra Penneo byder velkommen til dette års event"), ("SpeakerName", "Urs Kent"), ("SpeakerImg", UIImage(named: "urs_kent")!), ("CompanyImg", UIImage(named: "penneo")!)))]))
+        
+        eventTimes.append(EventTime(time: "10:15", events: [Event(ownDict: Dictionary<String, Any>(dictionaryLiteral: ("Id", 3), ("Title", "Keynote"), ("StartTime", "10:15"), ("EndTime", "11:00"), ("SpeakerName", "Jacob Wandt"), ("SpeakerImg", UIImage(named: "jacob_wandt")!)))]))
+        
+        eventTimes.append(EventTime(time: "11:00", events: [Event(ownDict: Dictionary<String, Any>(dictionaryLiteral: ("Id", 4), ("Title", "Pause"), ("StartTime", "11:00"), ("EndTime", "11:15")))]))
+        
+        eventTimes.append(EventTime(time: "11:15", events: [Event(ownDict: Dictionary<String, Any>(dictionaryLiteral: ("Id", 5), ("Title", "Workshop"), ("StartTime", "11:15"), ("EndTime", "13:00")))]))
+        
+        eventTimes.append(EventTime(time: "13:00", events: [Event(ownDict: Dictionary<String, Any>(dictionaryLiteral: ("Id", 6), ("Title", "Frokost"), ("StartTime", "13:00"), ("EndTime", "14:00")))]))
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

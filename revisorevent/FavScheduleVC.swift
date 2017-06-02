@@ -69,6 +69,18 @@ class FavScheduleVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         }
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let time = eventTimes[section].time
+        let headerView = ScheduleHeader.fromNib()
+        
+        headerView.configureHeader(time: time)
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    }
+    
     func pressedFavButton() {
         loadFromCore()
     }

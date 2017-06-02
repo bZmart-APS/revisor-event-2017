@@ -21,6 +21,9 @@
 		1186980B1EE183DA00671A59 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1186980A1EE183DA00671A59 /* UIView.swift */; };
 		1186980D1EE1846000671A59 /* EventDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1186980C1EE1846000671A59 /* EventDetail.swift */; };
 		1186980F1EE1849500671A59 /* EventDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1186980E1EE1849400671A59 /* EventDetail.xib */; };
+		118698111EE19F1300671A59 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118698101EE19F1300671A59 /* MapVC.swift */; };
+		118698131EE1A2CE00671A59 /* ScheduleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118698121EE1A2CE00671A59 /* ScheduleHeader.swift */; };
+		118698151EE1A2D800671A59 /* ScheduleHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 118698141EE1A2D800671A59 /* ScheduleHeader.xib */; };
 		118D8D241EE02931007D4E69 /* FavSchedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118D8D231EE02931007D4E69 /* FavSchedule.storyboard */; };
 		118D8D261EE02A0D007D4E69 /* FavScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D8D251EE02A0D007D4E69 /* FavScheduleVC.swift */; };
 		118D8D291EE02AB5007D4E69 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118D8D271EE02AB5007D4E69 /* ScheduleCell.swift */; };
@@ -50,6 +53,9 @@
 		1186980A1EE183DA00671A59 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		1186980C1EE1846000671A59 /* EventDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetail.swift; sourceTree = "<group>"; };
 		1186980E1EE1849400671A59 /* EventDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetail.xib; sourceTree = "<group>"; };
+		118698101EE19F1300671A59 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		118698121EE1A2CE00671A59 /* ScheduleHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleHeader.swift; sourceTree = "<group>"; };
+		118698141EE1A2D800671A59 /* ScheduleHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleHeader.xib; sourceTree = "<group>"; };
 		118D8D231EE02931007D4E69 /* FavSchedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FavSchedule.storyboard; sourceTree = "<group>"; };
 		118D8D251EE02A0D007D4E69 /* FavScheduleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavScheduleVC.swift; sourceTree = "<group>"; };
 		118D8D271EE02AB5007D4E69 /* ScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
@@ -120,6 +126,7 @@
 				112123071EE0109200D010CC /* Schedule */,
 				112122EF1EE00D8800D010CC /* ViewController.swift */,
 				118698021EE17E9800671A59 /* EventDetailsVC.swift */,
+				118698101EE19F1300671A59 /* MapVC.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -131,6 +138,8 @@
 				118D8D281EE02AB5007D4E69 /* ScheduleCell.xib */,
 				1186980C1EE1846000671A59 /* EventDetail.swift */,
 				1186980E1EE1849400671A59 /* EventDetail.xib */,
+				118698121EE1A2CE00671A59 /* ScheduleHeader.swift */,
+				118698141EE1A2D800671A59 /* ScheduleHeader.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -276,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				112122FB1EE00D8800D010CC /* LaunchScreen.storyboard in Resources */,
+				118698151EE1A2D800671A59 /* ScheduleHeader.xib in Resources */,
 				118D8D241EE02931007D4E69 /* FavSchedule.storyboard in Resources */,
 				118D8D2A1EE02AB5007D4E69 /* ScheduleCell.xib in Resources */,
 				1186980F1EE1849500671A59 /* EventDetail.xib in Resources */,
@@ -344,6 +354,7 @@
 				118D8D2C1EE0325C007D4E69 /* FavBtnPressedProtocol.swift in Sources */,
 				118D8D261EE02A0D007D4E69 /* FavScheduleVC.swift in Sources */,
 				118698031EE17E9800671A59 /* EventDetailsVC.swift in Sources */,
+				118698131EE1A2CE00671A59 /* ScheduleHeader.swift in Sources */,
 				112123091EE010B300D010CC /* ScheduleVC.swift in Sources */,
 				112122EE1EE00D8800D010CC /* AppDelegate.swift in Sources */,
 				118D8D2F1EE03C5F007D4E69 /* UIButton.swift in Sources */,
@@ -353,6 +364,7 @@
 				112122F61EE00D8800D010CC /* revisorevent.xcdatamodeld in Sources */,
 				1186980B1EE183DA00671A59 /* UIView.swift in Sources */,
 				112123101EE0150E00D010CC /* EventTime.swift in Sources */,
+				118698111EE19F1300671A59 /* MapVC.swift in Sources */,
 				1121230C1EE010DD00D010CC /* Event.swift in Sources */,
 				118D8D361EE040D8007D4E69 /* Constants.swift in Sources */,
 			);

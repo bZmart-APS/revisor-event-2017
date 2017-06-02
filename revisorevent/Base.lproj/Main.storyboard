@@ -71,7 +71,7 @@
         <!--Find Vej-->
         <scene sceneID="30F-y1-ppu">
             <objects>
-                <viewController id="5yg-fq-JG4" sceneMemberID="viewController">
+                <viewController id="5yg-fq-JG4" customClass="MapVC" customModule="revisorevent" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="36f-tU-fFm"/>
                         <viewControllerLayoutGuide type="bottom" id="lx3-Uv-4Ee"/>
@@ -93,6 +93,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Find Vej" id="4Co-Mb-WjH"/>
+                    <connections>
+                        <outlet property="map" destination="mXd-v7-5dy" id="dwi-jf-zwu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T8a-qr-bzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

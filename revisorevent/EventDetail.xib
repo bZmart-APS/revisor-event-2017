@@ -121,7 +121,7 @@
         </view>
     </objects>
     <resources>
-        <image name="penneo" width="157" height="65"/>
+        <image name="penneo" width="158" height="65"/>
         <image name="urs_kent" width="800" height="800"/>
     </resources>
 </document>

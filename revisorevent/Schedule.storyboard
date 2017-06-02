@@ -74,6 +74,7 @@
                         </connections>
                     </navigationItem>
                     <connections>
+                        <outlet property="segControl" destination="vu6-Nz-y4h" id="dFL-Mg-jSp"/>
                         <outlet property="tableView" destination="zVt-Pe-u8v" id="I0d-EM-caE"/>
                         <segue destination="LGC-am-IgA" kind="show" identifier="EventDetails" id="Rfn-y5-gRg"/>
                     </connections>

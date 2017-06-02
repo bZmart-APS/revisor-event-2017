@@ -17,7 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-               
+        
+        let attr = NSDictionary(object: UIFont(name: "Verdana", size: 16.0)!, forKey: NSFontAttributeName as NSCopying)
+        UISegmentedControl.appearance().setTitleTextAttributes(attr as [NSObject : AnyObject] , for: .normal)
+        
         return true
     }
 

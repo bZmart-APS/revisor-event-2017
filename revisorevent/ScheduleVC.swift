@@ -10,6 +10,7 @@ import UIKit
 
 class ScheduleVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var segControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
     var eventTimes = [EventTime]()
@@ -21,11 +22,11 @@ class ScheduleVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         
         (UIApplication.shared.delegate as! AppDelegate).setupTabBar()
-                
+        
         tableView.register(UINib(nibName: "ScheduleCell", bundle: nil), forCellReuseIdentifier: "ScheduleCell")
         tableView.estimatedRowHeight = 120
         tableView.rowHeight = UITableViewAutomaticDimension
-        
+
         createDummyData()
         
         eventTimes = Array(eventTimes).sorted(by: { $0.time < $1.time })
@@ -52,8 +53,16 @@ class ScheduleVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return eventTimes[section].time
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let time = eventTimes[section].time
+        let headerView = ScheduleHeader.fromNib()
+        
+        headerView.configureHeader(time: time)
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -230,7 +230,7 @@
 				TargetAttributes = {
 					112122E91EE00D8800D010CC = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = BK732U23JF;
+						DevelopmentTeam = M84BWU23W8;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -462,14 +462,14 @@
 			baseConfigurationReference = C1926E408C234BF713EACD73 /* Pods-revisorevent.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = BK732U23JF;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = M84BWU23W8;
 				INFOPLIST_FILE = revisorevent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = today.bzmart.revisorevent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6cbc09b2-1d56-4397-8fe0-30fbfae385c8";
-				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: *";
+				PROVISIONING_PROFILE = "58495c83-6bf1-4617-9e2c-a61e9cd8bebb";
+				PROVISIONING_PROFILE_SPECIFIER = "RevisorEvent - Dev";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;

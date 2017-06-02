@@ -59,15 +59,15 @@ class ScheduleVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func createDummyData() {
         eventTimes.append(EventTime(time: "09:30", events: [Event(ownDict: Dictionary<String, Any>(dictionaryLiteral: ("Id", 1), ("Title", "Registrering og morgenmad"), ("StartTime", "09:30"), ("EndTime", "10:00")))]))
         
-        eventTimes.append(EventTime(time: "10:00", events: [Event(ownDict: Dictionary<String, Any>(dictionaryLiteral: ("Id", 2), ("Title", "Velkomst"), ("StartTime", "10:00"), ("EndTime", "10:15"), ("Description", "Urs fra Penneo byder velkommen til dette års event"), ("SpeakerName", "Urs Kent"), ("SpeakerImg", UIImage(named: "urs_kent")!), ("CompanyImg", UIImage(named: "penneo")!)))]))
+        eventTimes.append(EventTime(time: "10:00", events: [Event(ownDict: Dictionary<String, Any>(dictionaryLiteral: ("Id", 2), ("Title", "Velkomst"), ("StartTime", "10:00"), ("EndTime", "10:15"), ("Description", "Urs fra Penneo byder velkommen til dette års event."), ("SpeakerName", "Urs Kent"), ("SpeakerImg", UIImage(named: "urs_kent")!), ("CompanyImg", UIImage(named: "penneo")!)))]))
         
-        eventTimes.append(EventTime(time: "10:15", events: [Event(ownDict: Dictionary<String, Any>(dictionaryLiteral: ("Id", 3), ("Title", "Keynote"), ("StartTime", "10:15"), ("EndTime", "11:00"), ("SpeakerName", "Jacob Wandt"), ("SpeakerImg", UIImage(named: "jacob_wandt")!)))]))
+        eventTimes.append(EventTime(time: "10:15", events: [Event(ownDict: Dictionary<String, Any>(dictionaryLiteral: ("Id", 3), ("Title", "Keynote"), ("StartTime", "10:15"), ("EndTime", "11:00"), ("Description", "Jacob Wandt, CEO i Zenegy, medstifter af e-conomic og revisor af baggrund, fortæller om sine erfaringer både som del af og leverandør til revisorbranchen."), ("SpeakerName", "Jacob Wandt"), ("SpeakerImg", UIImage(named: "jacob_wandt")!), ("CompanyImg", UIImage(named: "zenegy")!)))]))
         
-        eventTimes.append(EventTime(time: "11:00", events: [Event(ownDict: Dictionary<String, Any>(dictionaryLiteral: ("Id", 4), ("Title", "Pause"), ("StartTime", "11:00"), ("EndTime", "11:15")))]))
+        eventTimes.append(EventTime(time: "11:00", events: [Event(ownDict: Dictionary<String, Any>(dictionaryLiteral: ("Id", 4), ("Title", "Pause"), ("StartTime", "11:00"), ("EndTime", "11:15"), ("SpeakerImg", UIImage(named: "coffee")!)))]))
         
-        eventTimes.append(EventTime(time: "11:15", events: [Event(ownDict: Dictionary<String, Any>(dictionaryLiteral: ("Id", 5), ("Title", "Workshop"), ("StartTime", "11:15"), ("EndTime", "13:00")))]))
+        eventTimes.append(EventTime(time: "11:15", events: [Event(ownDict: Dictionary<String, Any>(dictionaryLiteral: ("Id", 5), ("Title", "Workshop"), ("StartTime", "11:15"), ("EndTime", "13:00"), ("Description", "Få opdateret din faglige viden. Ole Aagesen fra Revitax fortæller mere om ...."), ("CompanyImg", UIImage(named: "workshop")!)))]))
         
-        eventTimes.append(EventTime(time: "13:00", events: [Event(ownDict: Dictionary<String, Any>(dictionaryLiteral: ("Id", 6), ("Title", "Frokost"), ("StartTime", "13:00"), ("EndTime", "14:00")))]))
+        eventTimes.append(EventTime(time: "13:00", events: [Event(ownDict: Dictionary<String, Any>(dictionaryLiteral: ("Id", 6), ("Title", "Frokost"), ("StartTime", "13:00"), ("EndTime", "14:00"), ("Description", "Hotel Svendborg byder på en lækker buffet, lavet på udsøgte friske råvarer. Nyd frokosten i Restaurant Krinsen med mulighed for at sidde udenfor på vores hyggelige terrasse. Buffeten består af et STORT UDVALG af både forretter, hovedretter og desserter."), ("CompanyImg", UIImage(named: "buffet")!)))]))
     }
 }
 

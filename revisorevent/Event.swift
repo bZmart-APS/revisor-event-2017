@@ -70,6 +70,7 @@ class Event {
         _startTime = favEvent.startTime
         _endTime = favEvent.endTime
         _description = favEvent.eventDescription
+        _speakerName = favEvent.speakerName
         if let speakerImg = favEvent.speakerImg as? UIImage {
             _speakerImg = speakerImg
         }
@@ -109,6 +110,7 @@ class Event {
         favEvent.eventDescription = _description
         favEvent.speakerImg = _speakerImg
         favEvent.companyImg = _companyImg
+        favEvent.speakerName = _speakerName
     }
     
 }

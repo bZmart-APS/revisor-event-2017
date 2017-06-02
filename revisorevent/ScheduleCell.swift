@@ -13,11 +13,12 @@ class ScheduleCell: UITableViewCell {
 
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var descriptionLbl: UILabel!
-    @IBOutlet weak var startEnd: UILabel!
     @IBOutlet weak var favBtn: UIButton!
     @IBOutlet weak var speakerImg: UIImageView!
     @IBOutlet weak var speakerNameLbl: UILabel!
     @IBOutlet weak var companyImg: UIImageView!
+    @IBOutlet weak var leftSideStack: UIStackView!
+    @IBOutlet weak var speakerStack: UIStackView!
     
     var delegate: FavBtnPressedProtocol?
     
@@ -27,20 +28,59 @@ class ScheduleCell: UITableViewCell {
         speakerImg.layer.masksToBounds = false
         speakerImg.clipsToBounds = true
         speakerImg.layer.cornerRadius = speakerImg.frame.width / 2
+    
+        descriptionLbl.sizeToFit()
         
         _event = event
         title.text = event.title
-        startEnd.text = "\(event.startTime) - \(event.endTime)"
+        //startEnd.text = "\(event.startTime) - \(event.endTime)"
+        
+        descriptionLbl.numberOfLines = 2
+        
         if event.description == nil {
             descriptionLbl.isHidden = true
         } else {
             descriptionLbl.isHidden = false
             descriptionLbl.text = event.description
         }
-        speakerImg.image = event.speakerImg
-        companyImg.image = event.companyImg
-        speakerNameLbl.text = event.speakerName
-
+        
+        if event.speakerImg == nil {
+            speakerImg.isHidden = true
+        } else {
+            speakerImg.isHidden = false
+            speakerImg.image = event.speakerImg
+        }
+        
+        if event.companyImg == nil {
+            companyImg.isHidden = true
+        } else {
+            companyImg.isHidden = false
+            companyImg.image = event.companyImg
+        }
+        
+        if !speakerImg.isHidden && !companyImg.isHidden {
+            descriptionLbl.numberOfLines = 5
+        }
+        
+        if event.speakerName == nil {
+            speakerNameLbl.isHidden = true
+        } else {
+            speakerNameLbl.isHidden = false
+            speakerNameLbl.text = event.speakerName
+        }
+        
+        if speakerNameLbl.isHidden && speakerImg.isHidden && companyImg.isHidden {
+            leftSideStack.isHidden = true
+        } else {
+            leftSideStack.isHidden = false
+        }
+        
+        if speakerNameLbl.isHidden && speakerImg.isHidden {
+            speakerStack.isHidden = true
+        } else {
+            speakerStack.isHidden = false
+        }
+        
         updateFavBtnState()
     }
     

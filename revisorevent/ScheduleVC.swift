@@ -90,7 +90,7 @@ class ScheduleVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         eventTimes.append(EventTime(time: "11:15", events: [Event(ownDict: Dictionary<String, Any>(dictionaryLiteral: ("Id", 5), ("Title", "Workshop"), ("StartTime", "11:15"), ("EndTime", "13:00"), ("Description", "Få opdateret din faglige viden. Ole Aagesen fra Revitax fortæller mere om ...."), ("CompanyImg", UIImage(named: "workshop")!)))]))
         
-        eventTimes.append(EventTime(time: "13:00", events: [Event(ownDict: Dictionary<String, Any>(dictionaryLiteral: ("Id", 6), ("Title", "Frokost"), ("StartTime", "13:00"), ("EndTime", "14:00"), ("Description", "Hotel Svendborg byder på en lækker buffet, lavet på udsøgte friske råvarer. Nyd frokosten i Restaurant Krinsen med mulighed for at sidde udenfor på vores hyggelige terrasse. Buffeten består af et STORT UDVALG af både forretter, hovedretter og desserter. ASJDKLAJSLKDJALKSDJLKAJSDKJALKSDJLKAJDLKJLAKSJDLKJASLKDJLKAJFKLJASLKDJLKASJDLKAJKLSDJAKLSJDKLASJDKLAJSLKDJKLAJSLKDJLKASJD"), ("CompanyImg", UIImage(named: "buffet")!)))]))
+        eventTimes.append(EventTime(time: "13:00", events: [Event(ownDict: Dictionary<String, Any>(dictionaryLiteral: ("Id", 6), ("Title", "Frokost"), ("StartTime", "13:00"), ("EndTime", "14:00"), ("Description", "Hotel Svendborg byder på en lækker buffet, lavet på udsøgte friske råvarer. Nyd frokosten i Restaurant Krinsen med mulighed for at sidde udenfor på vores hyggelige terrasse. Buffeten består af et STORT UDVALG af både forretter, hovedretter og desserter."), ("CompanyImg", UIImage(named: "buffet")!)))]))
     }
 }
 

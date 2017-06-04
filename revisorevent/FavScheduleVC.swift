@@ -113,7 +113,7 @@ class FavScheduleVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         }
         
         if eventTimes.count == 0 {
-            let alertCon = UIAlertController(title: "No Fav", message: "You can add faves in schedule", preferredStyle: .alert)
+            let alertCon = UIAlertController(title: "Ingen events stjernet", message: "Du kan stjerne events i programmet", preferredStyle: .alert)
             alertCon.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             self.present(alertCon, animated: true, completion: nil)
         } else {

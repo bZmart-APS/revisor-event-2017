@@ -508,6 +508,7 @@
 			baseConfigurationReference = BF013E7FCBE54A318F8E75C9 /* Pods-revisorevent.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = M84BWU23W8;
 				INFOPLIST_FILE = revisorevent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10;
